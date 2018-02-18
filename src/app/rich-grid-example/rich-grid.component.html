@@ -1,0 +1,13 @@
+<div style="width: 100%;margin-top:2%">
+    <div *ngIf="showGrid">
+
+       <ag-grid-angular style="width: 85%; height: 210px;" class="ag-fresh"
+
+                     [gridOptions]="gridOptions"
+                     [columnDefs]="columnDefs"
+                     [rowData]="rowData"
+                     enableSorting>
+        </ag-grid-angular>
+    </div>
+
+</div>

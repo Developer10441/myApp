@@ -1,0 +1,22 @@
+<div class="row form-group">
+    <div class="col-md-2" style="margin-left:3%">
+      <label for="payBackMonthField">In-Kind Payback Month</label>
+    </div>
+    <div class="col-md-2">
+      <input class="form-control" type="text" size="20" value="{{inKindPayMonth}}" disabled="true" />
+      </div>
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-2">
+      <label for="MyField">Imbalance Direction</label>
+    </div>
+    <div class="col-md-2">
+        <select>
+            <option *ngFor="let imbalanceDirection123 of imbalanceDirection" value= {{imbalanceDirection123.id}}>
+              {{imbalanceDirection123.name}}
+            </option>
+          </select>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>

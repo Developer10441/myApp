@@ -1,0 +1,97 @@
+<div class="well text-center">
+    <h1>
+          In-Kind Blackout US 20,21,23
+    </h1>
+</div >
+
+
+<div class="row form-group">
+    <div class="col-md-2" style="margin-left:3%">
+      <label for="imblanceMonthField">Imbalance Month</label>
+    </div>
+    <div class="col-md-2">
+      <input value="{{imbalanceMonth}}" class="form-control" disabled="true" input="text" size="15"/>
+    </div>
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-2">
+      <label for="MyField">Impact Area</label>
+    </div>
+    <div class="col-md-2">
+        <select id="impactArea">
+            <option *ngFor="let impactedArea123 of impactedArea" value= {{impactedArea123.name}}>
+              {{impactedArea123.name}}
+            </option>
+          </select>
+      </div>
+    <div class="col-md-2">
+    </div>
+    </div>
+    
+<div class="row form-group">
+    <div class="col-md-2" style="margin-left:3%">
+      <label for="payBackMonthField">In-Kind Payback Month</label>
+    </div>
+    <div class="col-md-2">
+      <input class="form-control" type="text" size="20" value="{{inKindPayMonth}}" disabled="true" />
+      </div>
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-2">
+      <label for="MyField">Imbalance Direction</label>
+    </div>
+    <div class="col-md-2">
+        <select id="impactDirection">
+            <option *ngFor="let imbalanceDirection123 of imbalanceDirection" value= {{imbalanceDirection123.name}}>
+              {{imbalanceDirection123.name}}
+            </option>
+          </select>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>
+<!-- <app-imbalance-month-component></app-imbalance-month-component>
+<app-in-kind-pay-month></app-in-kind-pay-month> -->
+  <div class="row form-group">
+    <div class="col-md-4" style="margin-left:3%">
+      <label for="commentsLabel">Comments</label>
+      <textarea class="form-control" [(ngModel)]="commentsText" rows="2" cols="10" maxlength="100"></textarea>
+      </div>
+    <div class="col-md-6">
+    </div>
+  </div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 btn-group">
+      <button class="btn btn-md btn-primary" (click)="validateSubmit()" ng-init="count=0">Submit</button>
+      <button class="btn btn-md btn-danger" (click)="validateDelete()" ng-init="count=0">Delete</button>
+      <button class="btn btn-md" (click)="validateCancel()" ng-init="count=0">Cancel</button>
+    </div>
+  <div class="col-md-4"></div>
+</div>
+<div align="center">
+<!-- <rich-grid></rich-grid> -->
+<div style="width: 100%;margin-top:2%">
+    <div *ngIf="showGrid">
+
+       <ag-grid-angular style="width: 85%; height: 210px;" class="ag-fresh"
+
+                     [gridOptions]="gridOptions"
+                     [columnDefs]="columnDefs"
+                     [rowData]="rowData"
+                     enableSorting>
+        </ag-grid-angular>
+    </div>
+
+</div>
+
+</div>
+<div class="row" hidden="true">
+  <div class="col-md-2">
+     <label for="commentsLabel">Comments</label>
+  </div>
+  <div class="col-md-8">
+   <textarea class="form-control" rows="5" cols="40" maxlength="1000"></textarea>
+  </div>
+</div>
+

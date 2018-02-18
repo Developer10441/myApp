@@ -1,0 +1,22 @@
+<div class="row form-group">
+<div class="col-md-2" style="margin-left:3%">
+  <label for="imblanceMonthField">Imbalance Month</label>
+</div>
+<div class="col-md-2">
+  <input value="{{imbalanceMonth}}" class="form-control" disabled="true" input="text" size="15"/>
+</div>
+<div class="col-md-2">
+</div>
+<div class="col-md-2">
+  <label for="MyField">Impact Area</label>
+</div>
+<div class="col-md-2">
+    <select>
+        <option *ngFor="let impactedArea123 of impactedArea" value= {{impactedArea123.id}}>
+          {{impactedArea123.name}}
+        </option>
+      </select>
+  </div>
+<div class="col-md-2">
+</div>
+</div>
